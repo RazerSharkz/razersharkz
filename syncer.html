@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Change the Background Color with JavaScript</title>
+<script>
+    // Function to change webpage background color
+    function colorBG(color){
+        document.body.style.background = color;
+    }
+	// Plays the beep noise that I downloaded from
+	// https://www.zedge.net/ringtone/2f2086f6-c84e-36ee-aec0-50ac9881c954
+	// Also edited the audio to play without any latency via Audacity
+	function playBeep(){
+		document.getElementById('sound1').play();
+	}
+	function womboCombo(){
+		colorBG('red');
+		playBeep();
+		}
+</script>
+</head>
+<body>
+    <h1 id="heading">Audio Syncer</h1>
+    <p>This is simple website I made really quick to sync my camera with my pc microphone</p>
+    <hr>
+    <div>
+		<audio id="sound1" src="beep.mp3" preload="auto"></audio>
+        <label>Test Sound/BG/Combined both.</label>
+        <button type="button" onclick="colorBG('red');">colorBG</button>
+		<button onclick="document.getElementById('sound1').play();">Beep</button>	
+		<a href="#" onclick="womboCombo()">Sync</a>	
+    </div>
+</body>
+</html>
